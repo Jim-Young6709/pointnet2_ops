@@ -6,11 +6,11 @@ from setuptools import find_packages, setup
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 
 this_dir = osp.dirname(osp.abspath(__file__))
-# _ext_src_root = osp.join("pointnet2_ops", "_ext-src")
-# _ext_sources = glob.glob(osp.join(_ext_src_root, "src", "*.cpp")) + glob.glob(
-#     osp.join(_ext_src_root, "src", "*.cu")
-# )
-# _ext_headers = glob.glob(osp.join(_ext_src_root, "include", "*"))
+_ext_src_root = osp.join("pointnet2_ops", "_ext-src")
+_ext_sources = glob.glob(osp.join(_ext_src_root, "src", "*.cpp")) + glob.glob(
+    osp.join(_ext_src_root, "src", "*.cu")
+)
+_ext_headers = glob.glob(osp.join(_ext_src_root, "include", "*"))
 
 exec(open(osp.join("pointnet2_ops", "_version.py")).read())
 
